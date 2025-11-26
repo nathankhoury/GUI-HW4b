@@ -1,0 +1,71 @@
+/*
+File:           style.css
+Class:          COMP 4610 GUI Programming I
+Assignment:     HW4 Part 1, "Validation Plugin"
+Name:           Nathan Khoury
+Created:        10/22/2025
+Last Modified:  11/24/2025
+
+collection of all selectors grouped by method of selecting (tag selectors, class
+selectors, and ID selectors)
+*/
+
+/*** Tags ***/
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+}
+
+/*** Classes ***/
+.error {
+    color: rgb(176, 0, 0);
+}
+
+.formBody {
+    text-align: center;
+    min-width: 400px;
+    max-width: 40%;
+}
+
+.formLabelEntryPair {
+    padding: 16px 8px 16px 8px;
+}
+
+.formLabelEntryPair input {
+    margin-left: 8px;
+    float: right;
+}
+
+.inlineElement {
+    display: inline-block;
+    vertical-align: top;
+}
+
+/*** IDs ***/
+#formHeader {
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#tableContainer {
+    min-width: 400px;
+    max-width: 60%;
+    height: 90vh;
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
+#result {
+    border-collapse: collapse;
+}
+
+#result td, #result tr {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #333;
+}
+
+#result td:first-child, #result tr:first-child {
+    border-style: none;
+}
