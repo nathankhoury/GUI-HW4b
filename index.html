@@ -18,10 +18,10 @@ Error messages are displayed inline to inform the user of issues and their relat
   <head>
     <meta charset="utf-8">
     <title>Dynamic Multiplication Table</title>
-    <!-- my CSS -->
-    <link rel="stylesheet" href="css/style.css">
     <!-- jQuery UI CSS -->
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <!-- my CSS  -->
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <!-- user inputs for table -->
@@ -33,22 +33,22 @@ Error messages are displayed inline to inform the user of issues and their relat
             <label for="colMin">Minimum column value (between -50 to 50)</label>
             <input type="text" id="colMin" name="colMin" required>
           </p>
-          <div id="colMinSlider"></div>
+          <div id="colMinSlider" class="sliderCol"></div>
           <p class="formLabelEntryPair">
             <label for="colMax">Maximum column value (between -50 to 50)</label>
             <input type="text" id="colMax" name="colMax" required>
           </p>
-          <div id="colMaxSlider"></div>
+          <div id="colMaxSlider" class="sliderCol"></div>
           <p class="formLabelEntryPair">
             <label for="rowMin">Minimum row value (between -50 to 50)</label>
             <input type="text" id="rowMin" name="rowMin" required>
           </p>
-          <div id="rowMinSlider"></div>
+          <div id="rowMinSlider" class="sliderRow"></div>
           <p class="formLabelEntryPair">
             <label for="rowMax">Maximum row value (between -50 to 50)</label>
             <input type="text" id="rowMax" name="rowMax" required>
           </p>
-          <div id="rowMaxSlider"></div>
+          <div id="rowMaxSlider" class="sliderRow"></div>
           <button type="submit" id="generateButton">Generate</button>
       </fieldset>
     </form>

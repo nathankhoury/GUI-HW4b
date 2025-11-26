@@ -41,6 +41,22 @@ body {
     vertical-align: top;
 }
 
+.sliderRow {
+    background: #fbb;
+}
+
+.sliderRow .ui-slider-handle {
+    background: rgb(255, 82, 82);
+}
+
+.sliderCol {
+    background: #bbf;
+}
+
+.sliderCol .ui-slider-handle {
+    background: rgb(82, 82, 255);
+}
+
 /*** IDs ***/
 #formHeader {
     font-weight: bold;
