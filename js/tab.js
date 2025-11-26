@@ -11,12 +11,21 @@ $(document).ready(function() {
         const tabNum = tabCount;   // what number tab is being added
         const tabTitle = "Tab " + tabNum;       // title of new tab
         const tabId = "tab-" + tabNum;          // id of new tab
-        const tabContent = "<p>Content for " + tabTitle + " goes here.</p>"; // content of new tab
-        
-        // add the new tab
+        // clone the generated table
+        const tableClone = $("#result").clone();
+        // remove id from clone
+        tableClone.removeAttr("id");
+
+        // add the new tab header
         $("#tabs ul").append("<li><a href='#" + tabId + "'>" + tabTitle + "</a></li>");
-        // add the new content container
-        $("#tabs").append("<div id='" + tabId + "'>" + tabContent + "</div>");
+        // create a new div wrapper by using "<div>" rather than "div"
+        // give the new wrapper the tabId as its id
+        const tableWrapper = $("<div>").attr("id", tabId);
+        // append the cloned table to the new wrapper
+        tableWrapper.append($("<div>"));
+        tableWrapper.addClass("savedTable");
+        tableWrapper.append(tableClone);
+        $("#tabs").append(tableWrapper);
         // refresh to recognize new tab https://api.jqueryui.com/tabs/#method-refresh
         $("#tabs").tabs("refresh");
     });

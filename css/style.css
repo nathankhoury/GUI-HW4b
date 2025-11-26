@@ -57,6 +57,14 @@ body {
     background: rgb(82, 82, 255);
 }
 
+.savedTable {
+    min-width: 400px;
+    max-width: 60%;
+    height: 60vh;
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
 /*** IDs ***/
 #formHeader {
     font-weight: bold;
