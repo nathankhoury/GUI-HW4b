@@ -60,4 +60,19 @@ $(document).ready(function()  {
             $("#rowMin").valid(); // trigger validation for dependent
         }        
     });
+
+    // update sliders when input fields are changed manually
+    $("#colMin").on("input", function(e) {
+        $("#colMinSlider").slider("value", Number(e.target.value));
+    });
+    $("#colMax").on("input", function(e) {
+        $("#colMaxSlider").slider("value", Number(e.target.value));
+    });
+    $("#rowMin").on("input", function(e) {
+        $("#rowMinSlider").slider("value", Number(e.target.value));
+    });
+    $("#rowMax").on("input", function(e) {
+        $("#rowMaxSlider").slider("value", Number(e.target.value));
+    });
+
 });
