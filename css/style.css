@@ -1,10 +1,10 @@
 /*
 File:           style.css
 Class:          COMP 4610 GUI Programming I
-Assignment:     HW4 Part 1, "Validation Plugin"
+Assignment:     HW4 Part 2, "jQuery UI Slider and Tab Widgets"
 Name:           Nathan Khoury
 Created:        10/22/2025
-Last Modified:  11/24/2025
+Last Modified:  11/26/2025
 
 collection of all selectors grouped by method of selecting (tag selectors, class
 selectors, and ID selectors)
@@ -24,7 +24,7 @@ body {
 .formBody {
     text-align: center;
     min-width: 400px;
-    max-width: 40%;
+    max-width: 35%;
 }
 
 .formLabelEntryPair {
@@ -57,15 +57,47 @@ body {
     background: rgb(82, 82, 255);
 }
 
+.savedTable td, .savedTable tr {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #333;
+}
+
 .savedTable {
-    min-width: 400px;
-    max-width: 60%;
+    min-width: 70%;
+    max-width: 90%;
     height: 60vh;
     overflow-x: auto;
     overflow-y: auto;
 }
 
+.tabButtons {
+    margin: 12px;
+}
+
+.formLabelEntryPair .error {
+    display: block;
+    clear: both;
+    color: red;
+    margin-top: 4px;
+}
+
 /*** IDs ***/
+#mainHeader {
+    text-align: center;
+    font-size: 32px;
+    letter-spacing: 5px;
+    margin-bottom: 24px;
+}
+
+#p1, #p2 {
+    text-align: center;
+    max-width: 65%;
+    margin: 18px auto;
+    padding: 12px;
+
+}
+
 #formHeader {
     font-weight: bold;
     margin-left: auto;
@@ -73,8 +105,7 @@ body {
 }
 
 #tableContainer {
-    min-width: 400px;
-    max-width: 60%;
+    width: 60%;
     height: 60vh;
     overflow-x: auto;
     overflow-y: auto;
@@ -92,4 +123,20 @@ body {
 
 #result td:first-child, #result tr:first-child {
     border-style: none;
+}
+
+#tabs {
+    max-width: 50%;
+}
+
+#tabChecklist {
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+#savedTables {
+    margin: 0px 100px 0px 100px;
+    padding: 0px auto;
+    display: inline-block;
+    vertical-align: top;
 }

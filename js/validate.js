@@ -1,10 +1,10 @@
 /*
 File:           validate.js
 Class:          COMP 4610 GUI Programming I
-Assignment:     HW4 Part 1, "Validation Plugin"
+Assignment:     HW4 Part 2, "jQuery UI Slider and Tab Widgets"
 Name:           Nathan Khoury
 Created:        11/22/2025
-Last Modified:  11/24/2025
+Last Modified:  11/26/2025
 
 This file implements form validation using the jQuery Validation plugin. 
 All form fields are validated to ensure proper content. This is forced via
@@ -45,6 +45,9 @@ $(document).ready(function() {
         invalidHandler: function(event, validator) {
             // validation failed
             console.log("Validation failed. Number of errors: " + validator.numberOfInvalids());
+        },
+        errorPlacement: function(error, element) {
+            element.closest(".formLabelEntryPair").append(error);
         },
         // format error messages inline with red text
         errorClass: "error",    

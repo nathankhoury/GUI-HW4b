@@ -1,3 +1,16 @@
+/*
+File:           slider.js
+Class:          COMP 4610 GUI Programming I
+Assignment:     HW4 Part 2, "jQuery UI Slider and Tab Widgets"
+Name:           Nathan Khoury
+Created:        11/26/2025
+Last Modified:  11/26/2025
+
+This file implements the jQuery UI Sliders for each of the four input fields. Two-way
+binding is enforced between the sliders and their corresponding input fields. This file 
+is also responsible for setting fields values to 0 on page load to match the slider defaults.
+*/
+
 $(document).ready(function()  {
     // define slider constants
     const MIN = -50;
@@ -20,8 +33,10 @@ $(document).ready(function()  {
         slide: function(event, ui) {
             // update corresponding input field when slider is moved
             $("#colMin").val(ui.value);
-            $("#colMin").valid(); // trigger validation for self
-            $("#colMax").valid(); // trigger validation for dependent
+            // if valid then generate table
+            if ($("#colMin").valid() && $("#colMax").valid()) {
+                $("#form").submit();
+            }
         }        
     });
     $("#colMaxSlider").slider({
@@ -32,8 +47,10 @@ $(document).ready(function()  {
         slide: function(event, ui) {
             // update corresponding input field when slider is moved
             $("#colMax").val(ui.value);
-            $("#colMax").valid(); // trigger validation for self
-            $("#colMin").valid(); // trigger validation for dependent
+            // if valid then generate table
+            if ($("#colMin").valid() && $("#colMax").valid()) {
+                $("#form").submit();
+            }
         }        
     });
     $("#rowMinSlider").slider({
@@ -44,8 +61,10 @@ $(document).ready(function()  {
         slide: function(event, ui) {
             // update corresponding input field when slider is moved
             $("#rowMin").val(ui.value);
-            $("#rowMin").valid(); // trigger validation for self
-            $("#rowMax").valid(); // trigger validation for dependent
+            // if valid then generate table
+            if ($("#rowMin").valid() && $("#rowMax").valid()) {
+                $("#form").submit();
+            }
         }        
     });
     $("#rowMaxSlider").slider({
@@ -56,8 +75,10 @@ $(document).ready(function()  {
         slide: function(event, ui) {
             // update corresponding input field when slider is moved
             $("#rowMax").val(ui.value);
-            $("#rowMax").valid(); // trigger validation for self
-            $("#rowMin").valid(); // trigger validation for dependent
+            // if valid then generate table
+            if ($("#rowMin").valid() && $("#rowMax").valid()) {
+                $("#form").submit();
+            }
         }        
     });
 

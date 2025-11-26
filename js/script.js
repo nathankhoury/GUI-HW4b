@@ -1,10 +1,10 @@
 /*
 File:           script.js
 Class:          COMP 4610 GUI Programming I
-Assignment:     HW4 Part 1, "Validation Plugin"
+Assignment:     HW4 Part 2, "jQuery UI Slider and Tab Widgets"
 Name:           Nathan Khoury
 Created:        10/22/2025
-Last Modified:  11/24/2025
+Last Modified:  11/26/2025
 
 All dynamic interactivity on the page is handled here. Constant MIN/MAX bounds
 are defined and constant document references are also defined. All code begins
